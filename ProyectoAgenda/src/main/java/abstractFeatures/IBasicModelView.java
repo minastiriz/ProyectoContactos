@@ -1,6 +1,6 @@
 package abstractFeatures;
 
-public interface IBasicModelView {
+public interface IBasicModelView extends IComponent{
 	
 	public void setModel(IModelFunctionality model);
 

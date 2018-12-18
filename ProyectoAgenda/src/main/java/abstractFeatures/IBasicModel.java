@@ -1,5 +1,5 @@
 package abstractFeatures;
 
-public interface IBasicModel {
+public interface IBasicModel extends IComponent{
 
 }

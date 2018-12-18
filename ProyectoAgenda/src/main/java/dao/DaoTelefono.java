@@ -1,13 +1,13 @@
 package dao;
 
-import java.util.List;
+import java.util.Set;
 
-import dataStructure.Contacto;
+import abstractFeatures.IComponent;
 import dataStructure.Telefono;
 
-public interface DaoTelefono {
+public interface DaoTelefono extends IComponent{
 	
-	public List<Telefono> getTelefonos(Contacto contacto);
-	public List<Telefono> getTelefonos(int id);
+	public Set<Telefono> getAllTelefonos();
+	public int getIdOfOwner(int telefono);
 
 }

@@ -31,13 +31,7 @@ public class LoadStore {
 	
 	private static void initFirstDirectory(String filePath){
 		File fichero = new File(filePath);
-		try {
-			fichero.mkdirs();
-			fichero.createNewFile();
-		} catch (IOException e1) {
-			System.out.println("Error al crear el fichero");
-			e1.printStackTrace();
-		}
+		fichero.mkdirs();
 	}
 	
 	public static void createDirectorySave(String filePath) {
@@ -47,7 +41,14 @@ public class LoadStore {
 		}
 	}
 	
-	private static void initFirstFile(String filePath){
+	public static <T> void createFile(String filePath, T object) throws IOException {
+		File fichero = new File(filePath);
+		if(!fichero.exists()){
+			initFirstFile(filePath, object);
+		}
+	}
+	
+	private static <T> void initFirstFile(String filePath, T object) throws IOException{
 		File fichero = new File(filePath);
 		try {
 			fichero.createNewFile();
@@ -55,22 +56,8 @@ public class LoadStore {
 			System.out.println("Error al crear el fichero");
 			e1.printStackTrace();
 		}
+		
+		guardar(object, filePath);
 	}
 	
-	private static void checkFile(String filePath) {
-		File fichero = new File(filePath);
-		if(!fichero.exists()){
-			initFirstFile(filePath);
-		}
-	}
-	
-	public static <T> void guardarSave(T objeto, String filePath) throws IOException {
-		checkFile(filePath);
-		guardar(objeto, filePath);
-	}
-	
-	public static <T> T cargarSave(String filePath) throws ClassNotFoundException, IOException {
-		checkFile(filePath);
-		return cargar(filePath);
-	}
 }

@@ -1,13 +1,13 @@
 package dao;
 
-import java.util.List;
+import java.util.Set;
 
-import dataStructure.Contacto;
+import abstractFeatures.IComponent;
 import dataStructure.Email;
 
-public interface DaoEmail {
+public interface DaoEmail extends IComponent{
 	
-	public List<Email> getEmails(Contacto contacto);
-	public List<Email> getEmails(int id);
+	public Set<Email> getAllEmails();
+	public int getIdOfOwner(String nombre);
 
 }
