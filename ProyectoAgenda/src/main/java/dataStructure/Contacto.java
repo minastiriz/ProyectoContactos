@@ -85,5 +85,15 @@ public class Contacto {
 	public void removeGrupo(String grupo) {
 		grupos.remove(grupo);
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (!o.getClass().equals(this.getClass())) {
+			return false;
+		}
+		Contacto c = (Contacto) o;
+		return this.id == c.getId();
+		
+	}
 
 }

@@ -36,7 +36,7 @@ public class NotificationCenter {
 		return observers.remove(observer);
 	}
 	
-	public boolean notify(IObservable observable, Message message) {
+	public <T> boolean notify(IObservable observable, Message<T> message) {
 		List <IObservers> observers = costumers.get(observable);
 		if (observers == null)
 			return false;

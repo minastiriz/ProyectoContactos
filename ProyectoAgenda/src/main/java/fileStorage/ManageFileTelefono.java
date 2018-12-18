@@ -45,4 +45,26 @@ public class ManageFileTelefono implements DaoTelefono{
 		return dev;
 	}
 
+
+	@Override
+	public void add(Telefono telefono) {
+		telefonos.add(telefono);
+	}
+
+
+	@Override
+	public void remove(Telefono telefono) {
+		telefonos.remove(telefono);
+	}
+
+
+	@Override
+	public void update(Telefono telefono) {
+		for (Telefono t:telefonos) {
+			if(t.equals(telefono)) {
+				t.setIdOwner(telefono.getIdOwner());
+			}
+		}
+	}
+
 }

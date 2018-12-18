@@ -1,7 +1,7 @@
 package fileStorage;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import dao.DaoContacto;
 import dataStructure.Contacto;
@@ -9,9 +9,9 @@ import dataStructure.Contacto;
 public class ManageFileContacto implements DaoContacto{
 	
 	private static final String DEFAULT_PATH = "/contactos.txt";
-	private static final List<Contacto> DEFAULT_DATA_TO_MANAGE = new ArrayList<Contacto>();
+	private static final Set<Contacto> DEFAULT_DATA_TO_MANAGE = new HashSet<Contacto>();
 	
-	private List<Contacto> contactos;
+	private Set<Contacto> contactos;
 	
 	public ManageFileContacto() {
 		
@@ -20,7 +20,7 @@ public class ManageFileContacto implements DaoContacto{
 	}
 
 	@Override
-	public List<Contacto> getAllContactos() {
+	public Set<Contacto> getAllContactos() {
 		return contactos;
 	}
 
@@ -39,6 +39,30 @@ public class ManageFileContacto implements DaoContacto{
 	@Override
 	public void close() {
 		ManageFile.getInstance().guardar(DEFAULT_DATA_TO_MANAGE, DEFAULT_PATH);
+	}
+
+	@Override
+	public void add(Contacto contacto) {
+		contactos.add(contacto);
+	}
+
+	@Override
+	public void remove(Contacto contacto) {
+		contactos.remove(contacto);
+	}
+
+	@Override
+	public void update(Contacto contacto) {
+		for(Contacto c: contactos) {
+			if (c.equals(contacto)) {
+				c.setApellido(contacto.getApellido());
+				c.setEmails(contacto.getEmails());
+				c.setGrupos(contacto.getGrupos());
+				c.setNombre(contacto.getNombre());
+				c.setTelefonos(contacto.getTelefonos());
+			}
+		}
+		
 	}
 
 }

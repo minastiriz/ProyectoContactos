@@ -1,16 +1,22 @@
 package messages;
 
-public enum Message {
-	CHANGED_CONTACTOS(1);
-		
-	private int id;
+public class Message <T> {
 	
-	Message(int id){
-		this.id = id;
+	private MessageType message;
+	private T object;
+	
+	public Message(MessageType message) {
+		this.message = message;
 	}
 	
-	public int getId() {
-		return id;
+	public MessageType getMessage() {
+		return message;
+	}
+	public T getObject() {
+		return object;
+	}
+	public void setObject(T object) {
+		this.object = object;
 	}
 
 }

@@ -34,9 +34,13 @@ public abstract class BasicModel implements IBasicModel, IModelFunctionality, IO
 		components.add(daoTelefono);
 	}
 	
-	protected void notify(Message message) {
+	protected <T> void notify(Message<T> msg) {
 		NotificationCenter nc = NotificationCenter.getInstance();
-		nc.notify(this, message);
+		nc.notify(this, msg);
+	}
+	
+	protected <V> void sendMessage(Message<V> msg) {
+		notify(msg);
 	}
 	
 	@Override
@@ -45,6 +49,20 @@ public abstract class BasicModel implements IBasicModel, IModelFunctionality, IO
 			component.close();
 		}
 		
+	}
+	
+	protected <V> void doWork(IWorker<V> worker) {
+		Thread th = new Thread() {
+			@Override
+			public void run() {
+				V data = worker.doTask();
+				Message<V> msg = new Message<V>(worker.getTypeOfWork());
+				msg.setObject(data);
+				sendMessage(msg);			
+			}
+			
+		};
+		th.start();
 	}
 
 }

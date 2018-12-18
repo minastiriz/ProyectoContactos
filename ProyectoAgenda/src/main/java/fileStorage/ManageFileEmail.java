@@ -45,4 +45,26 @@ public class ManageFileEmail implements DaoEmail{
 		return dev;
 	}
 
+
+	@Override
+	public void add(Email email) {
+		emails.add(email);
+	}
+
+
+	@Override
+	public void remove(Email email) {
+		emails.remove(email);
+	}
+
+
+	@Override
+	public void update(Email email) {
+		for (Email e: emails) {
+			if(email.equals(e)) {
+				e.setIdOwner(email.getIdOwner());
+			}
+		}
+	}
+
 }

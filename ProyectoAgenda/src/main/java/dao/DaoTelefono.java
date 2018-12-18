@@ -9,5 +9,8 @@ public interface DaoTelefono extends IComponent{
 	
 	public Set<Telefono> getAllTelefonos();
 	public int getIdOfOwner(int telefono);
+	public void add(Telefono telefono);
+	public void remove(Telefono telefono);
+	public void update(Telefono telefono);
 
 }

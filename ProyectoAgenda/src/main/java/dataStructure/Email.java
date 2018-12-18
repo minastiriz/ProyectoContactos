@@ -18,6 +18,16 @@ public class Email {
 	public void setIdOwner(int idOwner) {
 		this.idOwner = idOwner;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (!o.getClass().equals(this.getClass())) {
+			return false;
+		}
+		Email e = (Email) o;
+		return this.nombre == e.getNombre();
+		
+	}
 
 
 }

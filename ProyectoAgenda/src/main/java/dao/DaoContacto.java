@@ -1,12 +1,15 @@
 package dao;
-import java.util.List;
+import java.util.Set;
 
 import abstractFeatures.IComponent;
 import dataStructure.Contacto;
 
 public interface DaoContacto extends IComponent{
 	
-	public List<Contacto> getAllContactos();
+	public Set<Contacto> getAllContactos();
 	public Contacto getContacto(int id);
+	public void add(Contacto contacto);
+	public void remove(Contacto contacto);
+	public void update(Contacto contacto);
 
 }

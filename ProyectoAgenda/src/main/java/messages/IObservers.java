@@ -2,6 +2,6 @@ package messages;
 
 public interface IObservers {
 	
-	public void notify(IObservable observable, Message message);
+	public <T> void notify(IObservable observable, Message<T> message);
 
 }

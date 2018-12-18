@@ -17,5 +17,15 @@ public class Telefono {
 	public void setIdOwner(int idOwner) {
 		this.idOwner = idOwner;
 	}
+	
+	@Override
+	public boolean equals(Object o) {
+		if (!o.getClass().equals(this.getClass())) {
+			return false;
+		}
+		Telefono t = (Telefono) o;
+		return this.tlf == t.getTlf();
+		
+	}
 
 }
