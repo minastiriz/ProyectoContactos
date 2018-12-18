@@ -1,6 +1,7 @@
 package messages;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -19,6 +20,10 @@ public class NotificationCenter {
 	//Instance body
 	
 	private Map<IObservable, List <IObservers>> costumers;
+	
+	public NotificationCenter() {
+		costumers = new HashMap<IObservable, List <IObservers>>();
+	}
 	
 	public boolean subscribe(IObservable observable, IObservers observer) {
 		List <IObservers> observers = costumers.get(observable);

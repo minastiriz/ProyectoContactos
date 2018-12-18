@@ -48,7 +48,7 @@ public class ManageFile {
 
 	public <T> T cargar(String filePath) {
 		try {
-			return LoadStore.cargar(filePath);
+			return LoadStore.cargar(DEFAULT_PATH + filePath);
 		} catch (ClassNotFoundException | IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
