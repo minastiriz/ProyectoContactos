@@ -19,6 +19,7 @@ import messages.Message;
  * @see Model
  * @see NotificationCenter
  * @see BasicViewModel
+ * @see IComponent
  * 
  * @version 0.1
  *
