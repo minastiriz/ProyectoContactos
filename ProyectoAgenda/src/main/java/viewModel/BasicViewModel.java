@@ -6,6 +6,16 @@ import abstractFeatures.IModelViewFunctionality;
 import abstractFeatures.IViewFunctionality;
 import messages.IObservers;
 
+/**
+ * 
+ * Sirve como punto de unión de todas las interfaces que debe implementar el View-Model en
+ * nuestro sistema para poder funcionar correctamente.
+ * 
+ * @author al341918
+ * 
+ * @version 0.1
+ *
+ */
 public abstract class BasicViewModel implements IBasicModelView, IModelViewFunctionality, IObservers{
 	
 	protected IModelFunctionality model;
