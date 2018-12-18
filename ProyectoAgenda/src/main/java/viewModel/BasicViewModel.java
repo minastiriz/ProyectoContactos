@@ -4,8 +4,9 @@ import abstractFeatures.IBasicModelView;
 import abstractFeatures.IModelFunctionality;
 import abstractFeatures.IModelViewFunctionality;
 import abstractFeatures.IViewFunctionality;
+import messages.IObservers;
 
-public abstract class BasicViewModel implements IBasicModelView, IModelViewFunctionality{
+public abstract class BasicViewModel implements IBasicModelView, IModelViewFunctionality, IObservers{
 	
 	protected IModelFunctionality model;
 	protected IViewFunctionality view;

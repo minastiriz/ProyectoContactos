@@ -8,6 +8,22 @@ import dataStructure.Email;
 import dataStructure.Telefono;
 import messages.MessageType;
 
+/**
+ * 
+ * Implementación del modelo básico haciendo uso de hebras. 
+ * 
+ * Extiende el modelo básico y se apoya en él para la comunicación 
+ * con el centro de notificaciones y para la creación de las hebras.
+ * 
+ * @author al341918
+ * 
+ * @see BasicModel
+ * @see IWorker
+ * 
+ * @version 1.0
+ * 
+ */
+
 public class Model extends BasicModel{
 	
 	public Model (IConfigureDao config) {

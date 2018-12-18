@@ -14,6 +14,27 @@ import messages.IObservable;
 import messages.Message;
 import messages.NotificationCenter;
 
+/**
+ * 
+ * Encapsula la creación de las hebras a través de IWorker y la comunicación con 
+ * el centro de notificaciones, a la vez que se encarga de la creación de las hebras
+ * y realiza los trabajos dados según los trabajadores dados.
+ * 
+ * También sirve como punto de unión de todas las interfaces que el modelo debe implementar 
+ * para funcionar en éste sistema.
+ * 
+ * @author al341918
+ * 
+ * @see IWorker
+ * @see IBasicModel
+ * @see IModelFunctionality
+ * @see IObservable
+ * @see NotificationCenter
+ * 
+ * @version 1.0
+ *
+ */
+
 public abstract class BasicModel implements IBasicModel, IModelFunctionality, IObservable{
 	
 	protected DaoContacto daoContacto;

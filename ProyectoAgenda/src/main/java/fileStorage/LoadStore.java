@@ -7,6 +7,15 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * 
+ * Encapsula la comunicación de bajo nivel con el sistema de ficheros.
+ * 
+ * @author al341918
+ * 
+ * @version 1.0.0
+ *
+ */
 public class LoadStore {
 
 	public static <T> void guardar(T objeto, String fichero) throws IOException {

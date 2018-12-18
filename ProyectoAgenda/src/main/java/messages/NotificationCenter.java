@@ -5,6 +5,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 
+ * Se encarga de la gestión del patrón observer.
+ * 
+ * Observadores se suscriben a objetos observables, y éstos notifican a traves del centro de
+ * notificaciones cuando se producen eventos relevantes.
+ * 
+ * En esta implementación, los datos se pueden pasar a través de los mensajes de las notificaciones y
+ * la id de los mensajes viene determinada por la enumeración MessageType.
+ * 
+ * @author al341918
+ * 
+ * @see IObservable
+ * @see IObservers
+ * @see Message
+ * 
+ * @version 1.0
+ *
+ */
+
 public class NotificationCenter {
 	
 	//Static body

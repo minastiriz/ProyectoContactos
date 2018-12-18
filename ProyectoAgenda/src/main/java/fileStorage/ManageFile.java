@@ -2,6 +2,20 @@ package fileStorage;
 
 import java.io.IOException;
 
+/**
+ * 
+ * Encapsula el manejo de errores y la comunicación con la clase LoadStore.
+ * 
+ * Deja preparado al sistema para una adaptación a cualquier sistema de ficheros.
+ * 
+ * @see LoadStore
+ * 
+ * @author al341918
+ * 
+ * @version 1.0.0
+ *
+ */
+
 public class ManageFile {
 	
 	//Constants
