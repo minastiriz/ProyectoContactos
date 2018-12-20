@@ -12,7 +12,7 @@
    <children>
       <AnchorPane prefHeight="110.0" prefWidth="600.0" style="-fx-background-color: #001833;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="24.0" layoutY="41.0" text="Congiguración de grupos" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <Label layoutX="24.0" layoutY="41.0" text="Congiguración" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
                <font>
                   <Font name="Arial" size="36.0" />
                </font>

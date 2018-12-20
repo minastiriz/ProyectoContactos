@@ -59,6 +59,7 @@ public class ManageFileEmail implements DaoEmail{
 
 
 	@Override
+	//Comprobar si esta bien, creo que deberia comprobarse si el getIdOwner es igual y modifica el nombre 
 	public void update(Email email) {
 		for (Email e: emails) {
 			if(email.equals(e)) {

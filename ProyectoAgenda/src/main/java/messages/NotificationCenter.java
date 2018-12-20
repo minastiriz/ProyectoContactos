@@ -36,7 +36,7 @@ public class NotificationCenter {
 			nc = new NotificationCenter();
 		return nc;
 	}
-	
+	 
 	//Instance body
 	
 	private Map<IObservable, List <IObservers>> costumers;
