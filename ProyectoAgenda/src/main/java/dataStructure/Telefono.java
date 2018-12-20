@@ -1,7 +1,13 @@
 package dataStructure;
 
-public class Telefono {
+import java.io.Serializable;
+
+public class Telefono implements Serializable{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int tlf;
 	private int idOwner;
 	

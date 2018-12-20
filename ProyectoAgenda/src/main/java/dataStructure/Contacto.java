@@ -1,12 +1,17 @@
 package dataStructure;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Contacto {
+public class Contacto implements Serializable{
 	
 	//Falta constructor por defecto
 	//Falta controlar valores no válidos listas
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String nombre;
 	private String apellido;
