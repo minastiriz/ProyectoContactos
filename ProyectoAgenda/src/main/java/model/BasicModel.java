@@ -35,7 +35,6 @@ import messages.NotificationCenter;
  *
  */
 
-//prueba
 public abstract class BasicModel implements IBasicModel, IModelFunctionality, IObservable{
 	
 	protected DaoContacto daoContacto;
